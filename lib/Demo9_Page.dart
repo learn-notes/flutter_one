@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 /// @author : Joh Liu
 /// @date : 2019/6/19 13:46
 ///
-void main() => runApp(new MyApp());
-
-class MyApp extends StatelessWidget {
+class PageDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

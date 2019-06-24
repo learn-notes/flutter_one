@@ -8,6 +8,7 @@ import 'Demo5_Container.dart';
 import 'Demo6_ListView.dart';
 import 'Demo7_Gesture.dart';
 import 'Demo8_Animate.dart';
+import 'Demo9_Page.dart';
 import 'utils/LayoutPadding.dart';
 
 ///
@@ -133,6 +134,17 @@ class _HomeState extends State<Home> {
                 /// 页面跳转
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => AnimateDemo()));
+              }),
+        ),
+
+        /// 页面 案例
+        LayoutPadding.Layout(
+          RaisedButton(
+              child: Text('页面案例'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => PageDemo()));
               }),
         ),
       ],
