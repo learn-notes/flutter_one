@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'utils/LayoutPadding.dart';
+import 'package:flutter_one/utils/layout_padding.dart';
 
 ///
 /// Text案例
