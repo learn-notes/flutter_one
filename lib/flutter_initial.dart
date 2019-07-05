@@ -47,7 +47,7 @@ class _InitialBodyState extends State<InitialBody> {
     return ListView(
       children: <Widget>[
         /// Button 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('Button案例'),
               onPressed: () {
@@ -58,7 +58,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// Text 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('Text案例'),
               onPressed: () {
@@ -69,7 +69,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// Image 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('Image案例'),
               onPressed: () {
@@ -80,7 +80,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// Layout 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('Layout案例'),
               onPressed: () {
@@ -91,7 +91,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// Container 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('Container案例'),
               onPressed: () {
@@ -102,7 +102,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// ListView 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('ListView案例'),
               onPressed: () {
@@ -113,7 +113,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// 手势 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('手势案例'),
               onPressed: () {
@@ -124,7 +124,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// 动画 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('动画案例'),
               onPressed: () {
@@ -135,7 +135,7 @@ class _InitialBodyState extends State<InitialBody> {
         ),
 
         /// 页面 案例
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('页面案例'),
               onPressed: () {

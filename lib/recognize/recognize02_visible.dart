@@ -34,7 +34,7 @@ class _VisibleDemoState extends State<VisibleDemo> {
         title: Text('Visible 替代'),
         centerTitle: true,
       ),
-      body: LayoutPadding.Layout(
+      body: LayoutPadding.layout(
         ListView(
           children: <Widget>[
             if (isShow) Text('I Like Flutter.'),

@@ -28,7 +28,7 @@ class _TextState extends State<TextDemo> {
       ),
       body: ListView(
         children: <Widget>[
-          LayoutPadding.LayoutList(<Widget>[
+          LayoutPadding.layoutlist(<Widget>[
             Text('1.输入文本'),
             TextField(
               controller: editController,
@@ -36,7 +36,7 @@ class _TextState extends State<TextDemo> {
               autofocus: true,
             ),
           ]),
-          LayoutPadding.LayoutList(<Widget>[
+          LayoutPadding.layoutlist(<Widget>[
             Text('2.文本'),
             Text(
               '\t\t\t\t\t\t\t\tFlutter作为一种全新的响应式，跨平台，高性能的移动开发框架。'

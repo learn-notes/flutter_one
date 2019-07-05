@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 /// @date : 2019/6/21 10:27
 ///
 class LayoutPadding {
-  static Widget LayoutList(List<Widget> child) {
+  static Widget layoutlist(List<Widget> child) {
     /// Container是一个容器布局，
     /// 可以为里面的空间添加padding、margin、width、height等
     return Container(
@@ -18,7 +18,7 @@ class LayoutPadding {
     );
   }
 
-  static Widget Layout(Widget child) {
+  static Widget layout(Widget child) {
     /// Container是一个容器布局，
     /// 可以为里面的空间添加padding、margin、width、height等
     return Container(

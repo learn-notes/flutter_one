@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
     return ListView(
       children: <Widget>[
         /// flutter 初识
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('flutter 初识'),
               onPressed: () {
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
         ),
 
         /// flutter 再探
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('flutter 再探'),
               onPressed: () {

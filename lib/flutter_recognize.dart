@@ -11,6 +11,8 @@ import 'initial/demo8_animate.dart';
 import 'initial/demo9_page.dart';
 import 'recognize/recognize01_widget.dart';
 import 'recognize/recognize02_visible.dart';
+import 'recognize/recognize03_thread.dart';
+import 'recognize/recognize04_asset.dart';
 import 'utils/layout_padding.dart';
 
 ///
@@ -47,7 +49,7 @@ class _RecognizeBodyState extends State<RecognizeBody> {
     return ListView(
       children: <Widget>[
         /// Widget 说明
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('Widget 说明'),
               onPressed: () {
@@ -58,13 +60,35 @@ class _RecognizeBodyState extends State<RecognizeBody> {
         ),
 
         /// Visible 替代
-        LayoutPadding.Layout(
+        LayoutPadding.layout(
           RaisedButton(
               child: Text('Visible 替代'),
               onPressed: () {
                 /// 页面跳转
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => VisibleDemo()));
+              }),
+        ),
+
+        /// 异步UI（runOnUiThread 替代）
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('异步UI'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => ThreadDemo()));
+              }),
+        ),
+
+        /// 资源文件
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('资源文件'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => AssetsDemo()));
               }),
         ),
       ],

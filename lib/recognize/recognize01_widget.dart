@@ -39,7 +39,7 @@ class _WidgetFulState extends State<WidgetFul> {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutPadding.Layout(
+    return LayoutPadding.layout(
       ListView(
         children: <Widget>[
           Text(textToShow),

@@ -23,7 +23,7 @@ class ListViewDemo extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           /// 简单案例
-          LayoutPadding.Layout(
+          LayoutPadding.layout(
             RaisedButton(
                 child: Text('简单案例'),
                 onPressed: () {
@@ -34,7 +34,7 @@ class ListViewDemo extends StatelessWidget {
           ),
 
           /// 普通案例
-          LayoutPadding.Layout(
+          LayoutPadding.layout(
             RaisedButton(
                 child: Text('普通案例'),
                 onPressed: () {
@@ -45,7 +45,7 @@ class ListViewDemo extends StatelessWidget {
           ),
 
           /// 高级案例
-          LayoutPadding.Layout(
+          LayoutPadding.layout(
             RaisedButton(
                 child: Text('高级案例'),
                 onPressed: () {

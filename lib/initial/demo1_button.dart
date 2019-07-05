@@ -24,7 +24,7 @@ class _ButtonState extends State<ButtonDemo> {
         // 标题居中显示
         centerTitle: true,
       ),
-      body: LayoutPadding.Layout(
+      body: LayoutPadding.layout(
         ListView(
           children: <Widget>[
             /// 按钮（背景色、字体色、点击事件）
