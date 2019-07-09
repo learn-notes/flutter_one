@@ -48,6 +48,8 @@ flutter:
     - images/img_01.jpg
     - images/2.0x/img_01.jpg
     - images/3.0x/img_01.jpg
+    - assets/diamond.png
+    - assets/slanted_menu.png
   #    - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
 

@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'initial/demo1_button.dart';
-import 'initial/demo2_text.dart';
-import 'initial/demo3_image.dart';
-import 'initial/demo4_layout.dart';
-import 'initial/demo5_container.dart';
-import 'initial/demo6_listView.dart';
-import 'initial/demo7_gesture.dart';
-import 'initial/demo8_animate.dart';
-import 'initial/demo9_page.dart';
 import 'recognize/recognize01_widget.dart';
 import 'recognize/recognize02_visible.dart';
 import 'recognize/recognize03_thread.dart';
 import 'recognize/recognize04_asset.dart';
+import 'recognize/recognize05_lifecycle.dart';
+import 'recognize/recognize06_inputtext.dart';
 import 'utils/layout_padding.dart';
 
 ///
@@ -89,6 +82,28 @@ class _RecognizeBodyState extends State<RecognizeBody> {
                 /// 页面跳转
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => AssetsDemo()));
+              }),
+        ),
+
+        /// 生命周期
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('生命周期'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => LifecycleDemo()));
+              }),
+        ),
+
+        /// 输入文本
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('输入文本'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => InputText()));
               }),
         ),
       ],
