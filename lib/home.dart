@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_one/flutter_initial.dart';
 
+import 'flutter_cookbook.dart';
 import 'flutter_demo.dart';
 import 'flutter_recognize.dart';
 import 'utils/layout_padding.dart';
@@ -73,6 +74,17 @@ class _HomeState extends State<Home> {
                 /// 页面跳转
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => FlutterDemo()));
+              }),
+        ),
+
+        /// flutter 实用教程
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('flutter 实用教程'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => CookBook()));
               }),
         ),
       ],
