@@ -7,6 +7,8 @@ import 'cookbook/02_design_01.dart';
 import 'cookbook/02_design_02.dart';
 import 'cookbook/02_design_03.dart';
 import 'cookbook/02_design_04.dart';
+import 'cookbook/02_design_05.dart';
+import 'cookbook/03_forms_01.dart';
 import 'utils/layout_padding.dart';
 
 ///
@@ -74,7 +76,7 @@ class _CookBodyState extends State<CookBody> {
               }),
         ),
 
-        ///============================ design ==================================///
+        ///========================== design ================================///
         /// 使用字体包
         LayoutPadding.layout(
           RaisedButton(
@@ -116,6 +118,29 @@ class _CookBodyState extends State<CookBody> {
                 /// 页面跳转
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => DesignFour()));
+              }),
+        ),
+
+        /// 屏幕方向
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('Design_屏幕方向'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => DesignFive()));
+              }),
+        ),
+
+        ///====================== 文本交互(Forms) ============================///
+        /// 文本变更
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('Forms_文本变更'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => FormsOne()));
               }),
         ),
       ],
