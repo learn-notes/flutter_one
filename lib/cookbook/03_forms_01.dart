@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 ///
 /// 文本变更
+/// TextField是默认的文本输入widget,样式为下划线，
+/// 类似`Android`中的`EditText`
 ///
 /// @author : Joh Liu
 /// @date : 2019/7/15 9:27
@@ -32,7 +34,6 @@ class _TextEditPageState extends State<TextEditPage> {
   @override
   void initState() {
     super.initState();
-    myController.addListener(_printLatestValue);
   }
 
   @override
@@ -41,15 +42,11 @@ class _TextEditPageState extends State<TextEditPage> {
     super.dispose();
   }
 
-  _printLatestValue() {
-    print("First text field: ${myController.text}");
-  }
-
   @override
   Widget build(BuildContext context) {
     return Center(
       /// 文本变更监听
-      child: Column(
+      child: ListView(
         children: <Widget>[
           TextField(
             controller: myController,
@@ -60,6 +57,16 @@ class _TextEditPageState extends State<TextEditPage> {
               print("Second text field: $myControllerTwo");
             },
           ),
+          RaisedButton(child: Text('弹窗'), onPressed: () {
+            return showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  content: Text(myController.text),
+                );
+              },
+            );
+          })
         ],
       ),
     );

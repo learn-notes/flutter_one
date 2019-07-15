@@ -9,6 +9,9 @@ import 'cookbook/02_design_03.dart';
 import 'cookbook/02_design_04.dart';
 import 'cookbook/02_design_05.dart';
 import 'cookbook/03_forms_01.dart';
+import 'cookbook/03_forms_02.dart';
+import 'cookbook/03_forms_03.dart';
+import 'cookbook/03_forms_04.dart';
 import 'utils/layout_padding.dart';
 
 ///
@@ -141,6 +144,39 @@ class _CookBodyState extends State<CookBody> {
                 /// 页面跳转
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => FormsOne()));
+              }),
+        ),
+
+        /// 文本框输入样式
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('Forms_文本输入样式'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => FormsTwo()));
+              }),
+        ),
+
+        /// 文本验证
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('Forms_文本验证'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => FormsThree()));
+              }),
+        ),
+
+        /// 文本焦点获取
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('Forms_文本焦点获取'),
+              onPressed: () {
+                /// 页面跳转
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => FormsFour()));
               }),
         ),
       ],
