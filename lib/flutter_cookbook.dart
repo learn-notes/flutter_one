@@ -20,6 +20,7 @@ import 'cookbook/06_lists_02.dart';
 import 'cookbook/06_lists_03.dart';
 import 'cookbook/07_navigation_01.dart';
 import 'cookbook/07_navigation_02.dart';
+import 'cookbook/07_navigation_03.dart';
 import 'utils/layout_padding.dart';
 
 ///
@@ -271,6 +272,16 @@ class _CookBodyState extends State<CookBody> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => NavigationTwo()));
+              }),
+        ),
+
+        ///路由传参
+        LayoutPadding.layout(
+          RaisedButton(
+              child: Text('Navigation_路由传参'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => NavigationThree()));
               }),
         ),
 

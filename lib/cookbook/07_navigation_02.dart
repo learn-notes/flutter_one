@@ -13,63 +13,44 @@ class NavigationTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '命名路由',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('命名路由'),
-        ),
-        body: NavigationPage(),
-      ),
+
+      // 使用“/”命名路由来启动应用
+      // 在这里，应用将从 FirstScreen Widget 启动
+      initialRoute: '/',
+      routes: {
+        // 当我们跳转到“/”时，构建 FirstScreen Widget
+        '/': (context) => FirstScreenPage(),
+        // 当我们跳转到“/second”时，构建 SecondScreen Widget
+        '/second': (context) => SecondScreenPage(),
+      },
     );
   }
 }
 
-class NavigationPage extends StatefulWidget {
-  @override
-  _NavigationPageState createState() {
-    return _NavigationPageState();
-  }
-}
-
-class _NavigationPageState extends State<NavigationPage> {
+///
+/// 第一个页面
+class FirstScreenPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: RaisedButton(
-        onPressed: () {
-          _navigateAndDisplaySelection(context);
-        },
-        child: Text('Pick an option, any option!'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('命名路由'),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/second');
+          },
+          child: Text('跳转第二页'),
+        ),
       ),
     );
-  }
-
-  _navigateAndDisplaySelection(BuildContext context) async {
-    /// result接收回调数据
-    final result = await Navigator.push(
-      context,
-      MaterialPageRoute(
-
-          /// intentData是SecondScreenPage定义的接收数据的常量
-          builder: (_) => SecondScreenPage(
-                intentData: '这是上一页传递的数据',
-              )),
-    );
-
-    if (result != null) {
-      Scaffold.of(context)
-        ..removeCurrentSnackBar()
-        ..showSnackBar(SnackBar(content: Text("$result")));
-    }
   }
 }
 
 ///
 /// 第二个页面
 class SecondScreenPage extends StatelessWidget {
-  final String intentData;
-
-  const SecondScreenPage({Key key, this.intentData}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,26 +63,11 @@ class SecondScreenPage extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(intentData),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
               child: RaisedButton(
                 onPressed: () {
-                  // Close the screen and return "Yep!" as the result.
-                  Navigator.pop(context, 'Yep!');
+                  Navigator.pop(context);
                 },
-                child: Text('Yep!'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: RaisedButton(
-                onPressed: () {
-                  // Close the screen and return "Nope!" as the result.
-                  Navigator.pop(context, 'Nope.');
-                },
-                child: Text('Nope.'),
+                child: Text('回第一页'),
               ),
             ),
           ],
