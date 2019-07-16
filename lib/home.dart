@@ -1,3 +1,4 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_one/flutter_initial.dart';
 
@@ -12,7 +13,9 @@ import 'utils/layout_padding.dart';
 /// @author : Joh Liu
 /// @date : 2019/6/20 18:01
 ///
-void main() => runApp(new MyApp());
+void main() {
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
